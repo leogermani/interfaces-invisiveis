@@ -1,0 +1,23 @@
+{
+	"name": "leogermani/wordcamp-apis",
+	"type": "wordpress-plugin",
+	"description": "Plugin-tutorial material de apoio para palestra no WordCamp SP 2020 sobre APIs do WordPress",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "leogermani"
+		}
+	],
+	"require": {
+		"php": ">=5.6.20"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^5.7 || ^6.5 || ^7.5"
+	},
+	"scripts": {
+		"phpunit": [
+			"@composer install",
+			"./vendor/phpunit/phpunit/phpunit --colors=always"
+		]
+	}
+}
