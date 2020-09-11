@@ -2,6 +2,7 @@
 /**
 * Plugin Name: Interfaces Invisíveis
 * Author: leogermani
+* Description: Plugin de exemplo para desenvolver APIs com WordPress
 * License: GPL2+
 */
 

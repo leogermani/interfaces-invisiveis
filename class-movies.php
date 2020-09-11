@@ -138,6 +138,8 @@ class Movies {
 	 */
 	public function sanitize_preco($value) {
 
+		// Se não tiver R$ no começo da stirng, adiciona
+		// Nota: isso é só um exemplo...
 		if ( strpos( $value, 'R$ ' ) !== 0 ) {
 			$value = 'R$ ' . $value;
 		}
