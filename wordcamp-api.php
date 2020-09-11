@@ -15,3 +15,9 @@ require 'class-filmes-endpoint.php';
 Movies::get_instance();
 
 new Filmes_Api_Endpoint();
+
+register_activation_hook( __FILE__, 'Wordcamp\plugin_activation' );
+
+function plugin_activation() {
+	flush_rewrite_rules();
+}
