@@ -46,6 +46,7 @@ class Movies {
 			'public' => true,
 			'show_in_menu' => false, // Não vai aparecer no admin!
 			'show_in_rest' => true, // Habilita esse post type na API.
+			'rest_base' => 'movies', // Faz com que o endpoint da API seja 'movies' no plural, e não movie, no singular, como é o o slug do post type.
 			'has_archive' => true,
 			'exclude_from_search' => true,
 		);
