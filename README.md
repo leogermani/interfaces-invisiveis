@@ -17,7 +17,11 @@ Dentro de cada um desses arquivos o código está comentado para ajudar na sua c
 
 Para rodar esse plugin basta baixá-lo na pasta de plugins e ativá-lo.
 
-Uma vez ativo, você vai poder interagir com seu pela API.
+Depois de ativar o plugin, novos endpoints estarão disponíveis:
+
+* `wp/v2/movies` -> pra acessar o post type `movie`
+* `wordcamp/v1/filmes` -> endpoint personalizado que retorna uma versão simplificada dos filmes
+
 
 ## Ferramentas adicionais
 
@@ -41,6 +45,36 @@ Para criar posts, mude o método para `POST` e informe os parâmetros obrigatór
 https://developer.wordpress.org/rest-api/reference/posts/
 
 E o ótimo post do Felipe Elia: https://felipeelia.com.br/a-api-rest-do-wordpress/
+
+### Fazendo requisições autenticadas
+
+Para algumas coisas você vai precisar fazer uma requisição autenticado com algum usuário. Para fazer isso, usamos o plugin BasicAuth (link ali em cima).
+
+* Instale e ative o plugin
+* No postman, ao fazer a requisição, visite a aba "Authentication
+* Selecione Basic Auth
+* Informe o usuário e senha
+
+Pronto!
+
+### Criando novos posts do tipo "Movie" para testar
+
+* Abra o postman
+* Selecione o método `POST`
+* entre a URL `http://MEUSITE.com/wp-json/wp/v2/movies`
+* Na seção parâmetros, você precisa no mínimo informar título de content:
+ * title: Meu filme
+ * content: Minha sinopse
+* Opcionalmente você pode informar outros parâmetros do post, como status, data, autor...
+* E você também pode informar os metadados que registramos, por exemplo ano e formato, da seguinte maneira:
+ * meta[ano]: 1999
+ * meta[formato]: DVD
+* Informe as credenciais na aba "Authorization"
+* Envie o post. 
+
+Veja um exemplo na imagem abaixo:
+
+![Exemplo de requisição para criar um post](exemplo-post.png)
 
 ## Rodando os testes
 
