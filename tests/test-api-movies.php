@@ -7,7 +7,7 @@ class ApiMovies extends Wordcamp_UnitApiTestCase {
 	function test_movies() {
 
 		// Cria um novo request para o nosso endpoint
-		$request = new \WP_REST_Request('POST', '/wp/v2/movie');
+		$request = new \WP_REST_Request('POST', '/wp/v2/movies');
 
 		// Os parâmetros que vamos mandar na requisição.
 		$request_query = [
@@ -40,7 +40,7 @@ class ApiMovies extends Wordcamp_UnitApiTestCase {
 
 	function test_ano_validation() {
 
-		$request = new \WP_REST_Request('POST', '/wp/v2/movie');
+		$request = new \WP_REST_Request('POST', '/wp/v2/movies');
 
 		$request_query = [
 			'title' => 'Matrix',
@@ -60,7 +60,7 @@ class ApiMovies extends Wordcamp_UnitApiTestCase {
 
 	function test_ano_validation_minimum_value() {
 
-		$request = new \WP_REST_Request('POST', '/wp/v2/movie');
+		$request = new \WP_REST_Request('POST', '/wp/v2/movies');
 
 		$request_query = [
 			'title' => 'Matrix',
@@ -80,7 +80,7 @@ class ApiMovies extends Wordcamp_UnitApiTestCase {
 
 	function test_preco_sanitization() {
 
-		$request = new \WP_REST_Request('POST', '/wp/v2/movie');
+		$request = new \WP_REST_Request('POST', '/wp/v2/movies');
 
 		$request_query = [
 			'title' => 'Matrix',

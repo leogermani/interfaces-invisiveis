@@ -46,7 +46,7 @@ class ApiFilmes extends Wordcamp_UnitApiTestCase {
 
 		$i = 1;
 		foreach ( $metas as $meta ) {
-			$request = new \WP_REST_Request('POST', '/wp/v2/movie');
+			$request = new \WP_REST_Request('POST', '/wp/v2/movies');
 
 			$request_body = [
 				'title' => 'Filme ' . $i,
